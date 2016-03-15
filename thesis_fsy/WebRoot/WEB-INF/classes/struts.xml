@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 开发模式 -->
+	<constant name="struts.devMode" value="true"></constant>
+	<!-- ui主题，简单主题 -->
+	<constant name="struts.ui.theme" value="simple"></constant>
+	<!-- 修改struts2的后缀 改成.do-->
+	<constant name="struts.action.extension" value="do"></constant>
+	
+	<!-- 系统管理 -->
+	<package name="user" namespace="/user" extends="struts-default">
+		<!-- 测试 -->
+		<action name="userInfoAction_*" class="userInfoAction" method="{1}">
+			<result name="save">/user/user_list.jsp</result>
+		</action>
+		
+		<!-- 系统入口-->
+		<action name="userLoginAction_*" class="userLoginAction" method="{1}">
+			<result name="home">/WEB-INF/views/system/home.jsp</result>
+			<result name="logout">/WEB-INF/views/system/login.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.thesised.fsy.user.domain.UserInfo" table="fsy_user_info">
+		<id name="fsyId" type="string" column="fsy_id">
+			<generator class="uuid"></generator>
+		</id>
+		<property name="fsyUser" type="string" column="fsy_user"></property>
+		<property name="fsyName" type="string" column="fsy_name"></property>
+		<property name="fsyPassword" type="string" column="fsy_password"></property>
+		<property name="fsyGrade" type="string" column="fsy_grade"></property>
+		<property name="fsyDepartment" type="string" column="fsy_department"></property>
+		<property name="fsyDepartmentStatus" type="integer" column="fsy_department_status"></property>
+		<property name="fsyPost" type="string" column="fsy_post"></property>
+		<property name="fsyPermission" type="string" column="fsy_permission"></property>
+		<property name="fsyAlterTime" type="timestamp" column="fsy_alter_time"></property>
+	</class>
+</hibernate-mapping>
